@@ -1,0 +1,195 @@
+﻿
+.attachment {
+    cursor: pointer;
+    height: 18px;
+    margin-right: 2px;
+    display: block;
+    flex: 1;
+}
+
+.attachmentFragment {
+    min-height: 19px;
+}
+
+    .attachmentFragment:hover .attachmentSizeLabel,
+    .attachmentFragment:focus .attachmentSizeLabel {
+        display: none;
+    }
+
+    .attachmentFragment:hover .removeUploadImage,
+    .attachmentFragment:focus .removeUploadImage {
+        display: block;
+    }
+
+.hBoxLayout:hover .removeUploadImage,
+.hBoxLayout:focus .removeUploadImage {
+    transition-duration: 200ms;
+    display: block;
+}
+
+.hBoxLayout {
+    display: flex;
+    flex-direction: row;
+}
+
+.vBoxLayout {
+    display: flex;
+    flex-direction: column;
+}
+
+.noBorderLeft {
+    border-left: none !important;
+}
+
+.flexItem {
+    flex: 1;
+}
+
+.smallMarginBottom {
+    margin-bottom: 5px;
+}
+
+.smallMarginLeft {
+    margin-left: 5px;
+}
+
+.attachmentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.maxHeight {
+    height: 100%;
+}
+
+.backgroundImage {
+    background-size: 64px 64px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bodyField {
+    resize: none;
+}
+
+.uploadedViewActions {
+    display: none;
+    flex-direction: row;
+}
+
+input.flexItem.senderField::placeholder {
+    width: 100%;
+}
+
+.labelItem {
+    width: 60px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.valueItem {
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+}
+
+.clickItem {
+    cursor: pointer;
+}
+
+input.flexItem.senderField::placeholder {
+    padding-left: 3px;
+}
+
+input.flexItem.subjectField::placeholder {
+    padding-left: 3px;
+}
+
+textarea.flexItem.backgroundImage.bodyField::placeholder {
+    padding-left: 3px;
+}
+
+.requestBubble {
+    width: 5px;
+}
+
+.tdGridPanelRequestLabel {
+    width: 5px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    padding-bottom: 2px;
+}
+
+.maxWidth {
+    width: 100%;
+}
+
+.uploadAttachmentFragment {
+    height: 19px;
+}
+
+input.flexItem.senderField::placeholder {
+    padding-left: 3px;
+}
+
+input.flexItem.subjectField::placeholder {
+    padding-left: 3px;
+}
+
+input.emailHeaderSenderValue.flexItem.smallMarginLeft {
+    padding-left: 3px;
+}
+
+input.emailHeaderSubjectValue.flexItem.smallMarginLeft {
+    padding-left: 3px;
+}
+
+textarea.flexItem.backgroundImage.bodyField::placeholder {
+    padding-left: 3px;
+}
+
+
+.imageButton {
+    background: white;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.smallImageButton {
+    height: 21px;
+    width: 21px;
+}
+
+.mediumImageButton {
+    height: 23px;
+    width: 23px;
+}
+
+.uploadAttachmentFragment:hover .removeUploadImage,
+.uploadAttachmentFragment:focus .removeUploadImage {
+    display: block;
+}
+
+.uploadAttachmentFragment:hover .attachmentSizeLabel,
+.uploadAttachmentFragment:focus .attachmentSizeLabel {
+    display: none;
+}
+
+.removeUploadImage {
+    background-size: 16px 16px;
+    height: 16px;
+    width: 43px;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-top: 2px;
+    margin-left: 3px;
+    cursor: pointer;
+    display: none;
+    margin-right: 3px;
+}
+
+.noRemoveUploadImage {
+    display: none;
+}
