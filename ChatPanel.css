@@ -1,0 +1,142 @@
+﻿.chatMessage.user-message {
+    display: flex;
+    margin: 15px 7%;
+}
+
+.chatMessage.user-message.incoming, .chatMessage.user-message.incoming .chat_metadata {
+    flex-direction: row;
+}
+
+.chatMessage.user-message.outgoing, .chatMessage.user-message.outgoing .chat_metadata {
+    flex-direction: row-reverse;
+}
+
+.user-message-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+}
+
+.chatMessage.user-message.outgoing .user-message-content {
+    align-items: flex-end;
+}
+
+.chat_metadata {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.chat_metadata .separator {
+    margin: 0 4px;
+}
+
+.chat_metadata .name {
+    cursor: default;
+}
+
+.chatMessage.user-message .deleteButton {
+    visibility: hidden;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    max-width: 16px;
+    min-width: 16px;
+    background-size: 16px 16px;
+}
+
+.chatMessage.user-message:hover .deleteButton {
+    visibility: visible;
+}
+
+.message-and-buttons {
+    display: flex;
+    margin-bottom: 7px;
+}
+
+.chatMessage.user-message.incoming .message-and-buttons {
+    flex-direction: row;
+}
+
+.chatMessage.user-message.outgoing .message-and-buttons {
+    flex-direction: row-reverse;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    min-width: 120px;
+}
+
+.chatMessage.user-message.incoming .message-content {
+    border-radius: 0px 20px 20px 20px;
+}
+
+.chatMessage.user-message.incoming .message-content, .chatMessage.user-message.incoming .chat_metadata {
+    margin-left: 10px;
+}
+
+.chatMessage.user-message.outgoing .message-content {
+    border-radius: 20px 0px 20px 20px;
+}
+
+.chatMessage.user-message.outgoing .message-content, .chatMessage.user-message.outgoing .chat_metadata {
+    margin-right: 10px;
+}
+
+.chat_message {
+    position: relative;
+}
+
+.chatMessage.user-message .deleteButton {
+    margin: 10px 5px 0 5px;
+}
+
+.chat_message span {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.chatAttachments {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+}
+
+.sendButton {
+    width: 36px;
+    height: 100%;
+    background-color: white;
+    background-position: center;
+    padding-left: 5px;
+    background-image: url(images/paper-plane-grey.png);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.attachments-centered {
+    justify-content: center;
+}
+
+.chatMessage.user-message:not(.adjacent) + .chatMessage.user-message.adjacent {
+    margin-top: -8px;
+}
+
+.chatMessage.user-message.adjacent {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.chatMessage.user-message.adjacent .contactPhoto {
+    opacity: 0;
+}
+
+.chatMessage.user-message.adjacent .chat_metadata {
+    display: none;
+}
+
+.chatMessage.user-message.adjacent .message-content {
+    border-radius: 20px;
+}
