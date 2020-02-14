@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="Images/favicon.gif" type="image/gif" id="favicon" />
+
+    <base href="/web/timio/">
+
+    <!-- COMMON INCLUDES BEGIN -->
+
+    <link rel="stylesheet" type="text/css" href="../shared/ext-7.1.0/build/classic/theme-crisp/resources/theme-crisp-all.css">
+    <link rel="stylesheet" type="text/css" href="Timio.css">
+    <link rel="stylesheet" type="text/css" href="../shared/ui/general/WaitCursor.css">
+    <link rel="stylesheet" type="text/css" href="Badge.css">
+    <link rel="stylesheet" type="text/css" href="../shared/ui/general/AutoCompletion.css">
+    <link rel="stylesheet" type="text/css" href="timio_AutoCompletion.css">
+    <link rel="stylesheet" type="text/css" href="Shortcut.css">
+    <link rel="stylesheet" type="text/css" href="WelcomePage.css">
+    <link rel="stylesheet" type="text/css" href="ChatPanel.css">
+    <link rel="stylesheet" type="text/css" href="MailClient/RequestManagement.css">
+
+    <script type="text/javascript" src="../shared/ext-7.1.0/build/ext-all-debug.js"></script>
+    <script type="text/javascript" src="../shared/ext-7.1.0/build/packages/charts/classic/charts-debug.js"></script>
+    <script type="text/javascript" src="../shared/clamp.js"></script>
+
+    <!-- GenerateJSB3 ignore begin -->
+    <script type="text/javascript" src="../WebRtc/Scripts/adapter.js"></script>
+    <script type="text/javascript" src="../WebRtc/Scripts/SvgInjector.js"></script>
+    <script type="text/javascript" src="../WebRtc/Scripts/ProxyAccess.js"></script>
+    <script type="text/javascript" src="../WebRtc/Scripts/rtcstats-all.js"></script>
+    <script type="text/javascript" src="../WebRtc/Scripts/webdevices-all.js"></script>
+    <script type="text/javascript" src="../WebRtc/Scripts/WebRtc-all.js"></script>
+    <!-- GenerateJSB3 ignore end -->
+
+    <script type="text/javascript" src="../shared/ext-7.1.0/packages/ux/classic/src/GMapPanel.js"></script>
+
+    <script type="text/javascript" src="../shared/ui/general/ClientSettings.js"></script>
+    <script type="text/javascript" src="../shared/LocalStorage.js"></script>
+    <script type="text/javascript" src="../shared/SessionStorage.js"></script>
+    <script type="text/javascript" src="ExtJsWorkarounds.js"></script>
+    <script type="text/javascript" src="../shared/constants.js"></script>
+    <script type="text/javascript" src="Separator.js"></script>
+
+    <script type="text/javascript" src="../shared/imageLibrary.js"></script>
+    <script type="text/javascript" src="ui/general/imageLibraryForTimio.js"></script>
+    <script type="text/javascript" src="ui/general/WrappingPanelForResponsiveness.js"></script>
+    <script type="text/javascript" src="BaseEventQueue.js"></script>
+    <script type="text/javascript" src="GlobalEventQueue.js"></script>
+
+    <script type="text/javascript" src="../shared/TelephoneNumber.js"></script>
+    <script type="text/javascript" src="../shared/EmailAddress.js"></script>
+    <script type="text/javascript" src="../shared/Helpers.js"></script>
+    <script type="text/javascript" src="../shared/VisibilityState.js"></script>
+    <script type="text/javascript" src="GlobalCSS.js"></script>
+    <script type="text/javascript" src="Badge.js"></script>
+    <script type="text/javascript" src="strings_de.js"></script>
+    <script type="text/javascript" src="strings_en.js"></script>
+    <script type="text/javascript" src="../shared/Language.js"></script>
+    <script type="text/javascript" src="../shared/enums.js"></script>
+    <script type="text/javascript" src="../shared/cxf-utils.js"></script>
+    <script type="text/javascript" src="../shared/ProxyAccess.js"></script>
+    <script type="text/javascript" src="../shared/CaesarProxy.js"></script>
+    <script type="text/javascript" src="../shared/ProxyTypeDefinitions.js"></script>
+    <script type="text/javascript" src="../shared/CaesarProxySession.js"></script>
+    <script type="text/javascript" src="../shared/ExtendCaesarProxyContact.js"></script>
+    <script type="text/javascript" src="CaesarProxySessionForTimio.js"></script>
+    <script type="text/javascript" src="Address.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/Photo.js"></script>
+    <script type="text/javascript" src="TeamChatFoto.js"></script>
+    <script type="text/javascript" src="ExtendChatRoom.js"></script>
+    <script type="text/javascript" src="ExtendAgentInfo.js"></script>
+    <script type="text/javascript" src="../shared/ExtendCTIJournalEntry.js"></script>
+    <script type="text/javascript" src="../shared/ExtendCaesarProxyCall.js"></script>
+    <script type="text/javascript" src="ExtendCTIPresenceState.js"></script>
+    <script type="text/javascript" src="ExtendCTIContact.js"></script>
+    <script type="text/javascript" src="ExtendChatMessage.js"></script>
+    <script type="text/javascript" src="ExtendAddressBook.js"></script>
+    <script type="text/javascript" src="../shared/ExtendSessionInfo.js"></script>
+    <script type="text/javascript" src="../shared/ExtendGetEventsResponse.js"></script>
+    <script type="text/javascript" src="ExtendGroupDescription.js"></script>
+    <script type="text/javascript" src="ExtendChatMessageEx.js"></script>
+    <script type="text/javascript" src="ExtendChatHistoryResponses.js"></script>
+    <script type="text/javascript" src="ContainerWithPersistentSize.js"></script>
+    <script type="text/javascript" src="ErrorMessageComponent.js"></script>
+    <script type="text/javascript" src="ErrorMessagesArea.js"></script>
+    <script type="text/javascript" src="ViewWithPhotos.js"></script>
+    <script type="text/javascript" src="../shared/ProxyActions.js"></script>
+    <script type="text/javascript" src="TimioSettings.js"></script>
+
+    <script type="text/javascript" src="../shared/CTI_Enums.js"></script>
+    <script type="text/javascript" src="../shared/EventLists/BaseEventList.js"></script>
+    <script type="text/javascript" src="../shared/EventLists/CallEventList.js"></script>
+    <script type="text/javascript" src="../shared/EventLists/PartnerCallEventList.js"></script>
+    <script type="text/javascript" src="../shared/EventLists/SessionInfoList.js"></script>
+    <script type="text/javascript" src="../shared/EventLists/LineStateEventList.js"></script>
+    <script type="text/javascript" src="../shared/EventLists/LineCommandEventList.js"></script>
+    <script type="text/javascript" src="../shared/CurrentState_Call.js"></script>
+    <script type="text/javascript" src="CTIActions/CTIAction.js"></script>
+    <script type="text/javascript" src="CTIActions/CTIAction_Dial.js"></script>
+    <script type="text/javascript" src="CTIActions/CTIAction_Diversion.js"></script>
+    <script type="text/javascript" src="CTIActions/CTIAction_BlindTransfer.js"></script>
+
+    <script type="text/javascript" src="GlobalEventListeners/GlobalEventListener.js"></script>
+    <script type="text/javascript" src="GlobalEventListeners/GlobalCallEventListener.js"></script>
+    <script type="text/javascript" src="GlobalEventListeners/GlobalChatEventListener.js"></script>
+    <script type="text/javascript" src="GlobalEventListeners/GlobalContactCenterEventListener.js"></script>
+    <script type="text/javascript" src="GlobalEventListeners/GlobalCampaignEventListener.js"></script>
+    <script type="text/javascript" src="../shared/GlobalEventListenerForWebDevices.js"></script>
+
+    <script type="text/javascript" src="GlobalListenerForDialogs.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/AutoCompletion.js"></script>
+    <script type="text/javascript" src="../shared/ThinButton.js"></script>
+    <script type="text/javascript" src="../shared/ComponentWithBadge.js"></script>
+
+    <script type="text/javascript" src="Actions/ActionThinButton.js"></script>
+    <script type="text/javascript" src="Actions/ActionEnums.js"></script>
+    <script type="text/javascript" src="Actions/BaseAction.js"></script>
+    <script type="text/javascript" src="Actions/Action_Call.js"></script>
+    <script type="text/javascript" src="Actions/Action_Dial.js"></script>
+    <script type="text/javascript" src="Actions/Action_Forward.js"></script>
+    <script type="text/javascript" src="Actions/Action_HangUp.js"></script>
+    <script type="text/javascript" src="Actions/Action_Redirect.js"></script>
+    <script type="text/javascript" src="Actions/Action_SendDTMF.js"></script>
+    <script type="text/javascript" src="Actions/Action_OpenURL.js"></script>
+    <script type="text/javascript" src="Actions/ActionFactory.js"></script>
+    <script type="text/javascript" src="Actions/Actions.js"></script>
+
+    <script type="text/javascript" src="CurrentState_States.js"></script>
+    <script type="text/javascript" src="CurrentState_BuddyList.js"></script>
+    <script type="text/javascript" src="CurrentState_DataConnect.js"></script>
+    <script type="text/javascript" src="../shared/CurrentState_Journal.js"></script>
+    <script type="text/javascript" src="CurrentState_Chats.js"></script>
+    <script type="text/javascript" src="../shared/CurrentState_ContactCenter.js"></script>
+    <script type="text/javascript" src="CurrentState_ContactCenterForTimio.js"></script>
+    <script type="text/javascript" src="../shared/uiFunctions.js"></script>
+    <script type="text/javascript" src="Date.js"></script>
+
+    <script type="text/javascript" src="ContactActions.js"></script>
+    <script type="text/javascript" src="JournalActions.js"></script>
+    <script type="text/javascript" src="ChatActions.js"></script>
+
+    <script type="text/javascript" src="../shared/ui/general/NavigatorList.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/Dialogs.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/ModalDialog.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/TextfieldDialog.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/customPanel.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/CustomMenu.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/logInWindow.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/CheapLabel.js"></script>
+
+    <script type="text/javascript" src="../shared/ui/general/ComboBoxWithHistory.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/ConfirmDeleteButton.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/searchContactWindow.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/GreySplitter.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/PresenceStateConfiguration.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/passwordChanger.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/AgentStateConfiguration.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/LoadingMask.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/PrivacyConfigurationPanel.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/CollapsibleContainerWithHeader.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/ToggleButton.js"></script>
+    <script type="text/javascript" src="../shared/ui/general/InstantSearchField.js"></script>
+
+    <script type="text/javascript" src="ChooseNumberContextMenu.js"></script>
+    <script type="text/javascript" src="../shared/Label.js"></script>
+    <script type="text/javascript" src="../shared/Link.js"></script>
+    <script type="text/javascript" src="CallButton.js"></script>
+
+    <script type="text/javascript" src="../shared/ThinImage.js"></script>
+
+    <script type="text/javascript" src="logInWindowForTimio.js"></script>
+    <script type="text/javascript" src="InvitationDialogs.js"></script>
+    <script type="text/javascript" src="headerFoto.js"></script>
+    <script type="text/javascript" src="ChannelStatePanel.js"></script>
+    <script type="text/javascript" src="PresenceStateCheckItem.js"></script>
+    <script type="text/javascript" src="PresenceStateMenu.js"></script>
+    <script type="text/javascript" src="SettingsBasePanel.js"></script>
+    <script type="text/javascript" src="SettingsSearchPanel.js"></script>
+    <script type="text/javascript" src="SettingsInfoPanel.js"></script>
+    <script type="text/javascript" src="SettingsChatPanel.js"></script>
+    <script type="text/javascript" src="SettingsNotificationsPanel.js"></script>
+    <script type="text/javascript" src="SettingsEmailPanel.js"></script>
+    <script type="text/javascript" src="SettingsPartnerStrip.js"></script>
+    <script type="text/javascript" src="SettingsUserPanel.js"></script>
+    <script type="text/javascript" src="SettingsPrivacyPanel.js"></script>
+    <script type="text/javascript" src="SettingsPresentationPanel.js"></script>
+    <script type="text/javascript" src="SettingsDevicesPanel.js"></script>
+    <script type="text/javascript" src="SettingsTSPPanel.js"></script>
+    <script type="text/javascript" src="SettingsPanel.js"></script>
+
+    <script type="text/javascript" src="BaseDialogForAnnouncementsAndRedirections.js"></script>
+    <script type="text/javascript" src="AnnouncementsDialog.js"></script>
+    <script type="text/javascript" src="RedirectionsDialog.js"></script>
+
+    <script type="text/javascript" src="AgentStateContainer.js"></script>
+    <script type="text/javascript" src="PresenceTextContainer.js"></script>
+    <script type="text/javascript" src="Header.js"></script>
+    <script type="text/javascript" src="OverlayButton.js"></script>
+    <script type="text/javascript" src="OverlayButtons.js"></script>
+    <script type="text/javascript" src="BaseViewPanel.js"></script>
+
+    <script type="text/javascript" src="MainChatPanel.js"></script>
+    <script type="text/javascript" src="ContactListPanel.js"></script>
+    <script type="text/javascript" src="CallHistoryDetailsPanel.js"></script>
+    <script type="text/javascript" src="BasePersonalContactsListPanel.js"></script>
+    <script type="text/javascript" src="PersonalContactsPanel.js"></script>
+    <script type="text/javascript" src="FavoritesPanel.js"></script>
+    <script type="text/javascript" src="NewContactPanel.js"></script>
+    <script type="text/javascript" src="ColleaguesPanel.js"></script>
+    <script type="text/javascript" src="ExternalContactsPanel.js"></script>
+    <script type="text/javascript" src="BaseJournalPanel.js"></script>
+    <script type="text/javascript" src="GlobalJournalPanel.js"></script>
+    <script type="text/javascript" src="CallsWithNotePanel.js"></script>
+    <script type="text/javascript" src="GlobalJournalContainer.js"></script>
+    <script type="text/javascript" src="MissedCallsPanel.js"></script>
+    <script type="text/javascript" src="SearchTabPanel.js"></script>
+    <script type="text/javascript" src="ContactsPanel.js"></script>
+    <script type="text/javascript" src="SearchPanel.js"></script>
+    <script type="text/javascript" src="AddressBookSelectorButton.js"></script>
+    <script type="text/javascript" src="SearchPanelWithAddressBookChooser.js"></script>
+    <script type="text/javascript" src="BusinessCardPanel.js"></script>
+    <script type="text/javascript" src="BusinessCardTooltip.js"></script>
+    <script type="text/javascript" src="BusinessCard_ShowHideBehaviour.js"></script>
+    <script type="text/javascript" src="AddAttachmentsButton.js"></script>
+    <script type="text/javascript" src="ChatTemplate.js"></script>
+    <script type="text/javascript" src="MediaListPanel.js"></script>
+    <script type="text/javascript" src="LoadPreviousMessagesButton.js"></script>
+    <script type="text/javascript" src="ChatHistory.js"></script>
+    <script type="text/javascript" src="EmojiButton.js"></script>
+    <script type="text/javascript" src="ChatPanel.js"></script>
+    <script type="text/javascript" src="LiveChatPanel.js"></script>
+    <script type="text/javascript" src="WhatsAppChatPanel.js"></script>
+    <script type="text/javascript" src="TeamChatPanel.js"></script>
+    <script type="text/javascript" src="NewMessageDialogForBlackBoards.js"></script>
+    <script type="text/javascript" src="BlackBoardPanel.js"></script>
+    <script type="text/javascript" src="GoogleMapsPanel.js"></script>
+    <script type="text/javascript" src="ContactJournalPanel.js"></script>
+    <script type="text/javascript" src="BaseHistoryPanel.js"></script>
+    <script type="text/javascript" src="ContactPanel.js"></script>
+    <script type="text/javascript" src="CallNoticePanel.js"></script>
+    <script type="text/javascript" src="JournalEntryPanel.js"></script>
+    <script type="text/javascript" src="JournalEntryACDPanel.js"></script>
+    <script type="text/javascript" src="IFrame.js"></script>
+    <script type="text/javascript" src="ActivitiesPanel.js"></script>
+    <script type="text/javascript" src="FormPanel.js"></script>
+    <script type="text/javascript" src="CallPanel.js"></script>
+    <script type="text/javascript" src="UniqueTabPanel.js"></script>
+    <script type="text/javascript" src="ConversationsTabPanel.js"></script>
+    <script type="text/javascript" src="KeyPadPanel.js"></script>
+    <script type="text/javascript" src="PartnerBoard/NewGroupDialog.js"></script>
+    <script type="text/javascript" src="PartnerBoard/BaseTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/BaseContactTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/FullContactTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/MiniContactTile.js"></script>
+
+    <script type="text/javascript" src="PartnerBoard/BaseDashboardValueTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/FullDashboardValueTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/MiniDashBoardValueTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/FullDashBoardTimespanTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/MiniDashBoardTimespanTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/FullDashBoardPercentageTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/MiniDashBoardPercentageTile.js"></script>
+
+    <script type="text/javascript" src="PartnerBoard/BaseACDOverviewTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/FullACDOverviewTile.js"></script>
+    <script type="text/javascript" src="PartnerBoard/MiniACDOverviewTile.js"></script>
+
+    <script type="text/javascript" src="PartnerBoard/GroupContextMenu.js"></script>
+    <script type="text/javascript" src="PartnerBoard/BaseGroupPanel.js"></script>
+    <script type="text/javascript" src="PartnerBoard/GroupPanel_Simple.js"></script>
+    <script type="text/javascript" src="PartnerBoard/GroupPanel_Tenant.js"></script>
+    <script type="text/javascript" src="PartnerBoard/GroupPanel_ACD.js"></script>
+
+    <script type="text/javascript" src="WebRtcEvents.js"></script>
+    <script type="text/javascript" src="WebRtcPanel.js"></script>
+    <script type="text/javascript" src="RenderImages.js"></script>
+
+    <script type="text/javascript" src="MainContactsPanel.js"></script>
+    <script type="text/javascript" src="MainCallPanel.js"></script>
+    <script type="text/javascript" src="MainSearchPanel.js"></script>
+    <script type="text/javascript" src="MainPartnerStripPanel.js"></script>
+    <script type="text/javascript" src="ChatOverviewPanel.js"></script>
+    <script type="text/javascript" src="ChooseTeamChatContainer.js"></script>
+    <script type="text/javascript" src="ChooseChatPartnerContainer.js"></script>
+    <script type="text/javascript" src="ChooseWebRtcPartner.js"></script>
+    <script type="text/javascript" src="TeamChatsPanel.js"></script>
+    <script type="text/javascript" src="Channel.js"></script>
+    <script type="text/javascript" src="Channel_Calls.js"></script>
+    <script type="text/javascript" src="Channel_EMails.js"></script>
+    <script type="text/javascript" src="Channel_WebChats.js"></script>
+    <script type="text/javascript" src="Channel_Contacts.js"></script>
+    <script type="text/javascript" src="Channel_PartnerStrip.js"></script>
+    <script type="text/javascript" src="Channel_Welcome.js"></script>
+    <script type="text/javascript" src="Channel_Statistics.js"></script>
+    <script type="text/javascript" src="SearchResultsPanel.js"></script>
+    <script type="text/javascript" src="PickNumberAndStartAction.js"></script>
+    <script type="text/javascript" src="DiversionPanel.js"></script>
+    <script type="text/javascript" src="TelephoneInputPanel.js"></script>
+    <script type="text/javascript" src="WelcomePage.js"></script>
+
+    <script type="text/javascript" src="Notifications/informationContainer.js"></script>
+
+    <script type="text/javascript" src="MailClient/RequestStore.js"></script>
+    <script type="text/javascript" src="MailClient/MergeRequestDialog.js"></script>
+    <script type="text/javascript" src="MailClient/UserActionButton.js"></script>
+    <script type="text/javascript" src="MailClient/UserActionContainer.js"></script>
+    <script type="text/javascript" src="MailClient/UserActionContainerFactory.js"></script>
+    <script type="text/javascript" src="MailClient/RequestManagementEventQueue.js"></script>
+    <script type="text/javascript" src="MailClient/MailActionDialog.js"></script>
+    <script type="text/javascript" src="MailClient/EmailHeader.js"></script>
+    <script type="text/javascript" src="MailClient/EmailRequest.js"></script>
+    <script type="text/javascript" src="MailClient/model.js"></script>
+    <script type="text/javascript" src="MailClient/requestOverview.js"></script>
+    <script type="text/javascript" src="MailClient/MainEMailPanel.js"></script>
+    <script type="text/javascript" src="MailClient/TreeWithSearchDialog.js"></script>
+
+    <script type="text/javascript" src="Notifications/PlaySoundsInfinitelyPlugin.js"></script>
+    <script type="text/javascript" src="Notifications/LiveChatPlugin.js"></script>
+    <script type="text/javascript" src="Notifications/BrowserNotification.js"></script>
+    <script type="text/javascript" src="Notifications/InCallNotification.js"></script>
+    <script type="text/javascript" src="Notifications/chatNotification.js"></script>
+    <script type="text/javascript" src="Notifications/TeamChatNotification.js"></script>
+    <script type="text/javascript" src="Notifications/BlackBoardNotification.js"></script>
+    <script type="text/javascript" src="Notifications/liveChatNotification.js"></script>
+    <script type="text/javascript" src="Notifications/WhatsAppNotification.js"></script>
+    <script type="text/javascript" src="Notifications/WebRtcNotification.js"></script>
+    <script type="text/javascript" src="Notifications/WebRtcLiveNotification.js"></script>
+    <script type="text/javascript" src="Notifications/WebRtcLiveNotificationForInvitation.js"></script>
+    <script type="text/javascript" src="Notifications/CampaignNotification.js"></script>
+    <script type="text/javascript" src="SelectOutboundGroupDialog.js"></script>
+    <script type="text/javascript" src="Shortcut.js"></script>
+    <script type="text/javascript" src="SkillsView.js"></script>
+    <script type="text/javascript" src="ContactCenterForwardDialog.js"></script>
+    <script type="text/javascript" src="OEMSettings.js"></script>
+    <script type="text/javascript" src="Viewport.js"></script>
+    <script type="text/javascript" src="Application.js"></script>
+    <!-- COMMON INCLUDES END -->
+
+    <script type="text/javascript" src="Timio.js"></script>
+
+</head>
+
+<body style="display:flex">
+    <noscript>
+        <h1>In Ihrem Browser ist JavaScript deaktiviert.</h1>
+        <p>
+            timio funktioniert nur mit aktiviertem JavaScript!
+        </p>
+    </noscript>
+    <audio id="notificationSound" style="display:none" preload="auto"><source src="Notifications/message.wav" type="audio/wav"></audio>
+
+
+    <!-- GenerateJSB3 ignore begin -->
+    <script type="text/javascript" src="../shared/ui/general/WaitCursor.js"></script>
+    <script type="text/javascript" src="../WebRtc/Scripts/WebRtcForSip.js"></script>
+    <!-- GenerateJSB3 ignore end -->
+
+</body>
+</html>

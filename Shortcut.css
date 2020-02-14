@@ -1,0 +1,12 @@
+﻿.containerImage {
+    display: none;
+}
+
+.editMode .containerImage {
+    display: flex;
+}
+
+.containerImage:hover {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}

@@ -1,0 +1,140 @@
+﻿.welcomePageHeaderGrid {
+    display: grid;
+    grid-template-columns: minmax(75px, 1fr) 1fr minmax(75px, 1fr) minmax(75px, 1fr);
+    grid-template-areas: "name name name clientMode" "numberMissedCalls emptySpace loginTime loginDuration";
+    grid-row-gap:5px;
+}
+
+.small_welcomePageHeaderGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "clientMode" "emptySpace" "numberMissedCalls" "loginTime" "loginDuration";
+}
+
+.welcomePageHeaderGrid .welcomeSubTitle {
+    font-size: 20px;
+}
+
+.small_welcomePageHeaderGrid .welcomeSubTitle {
+    font-size: 18px;
+}
+
+.welcomePageHeaderGrid .statisticValue {
+    text-align: center;
+    font-size: 14px;
+}
+
+.small_welcomePageHeaderGrid .statisticValue {
+    font-size: 12px;
+}
+
+.welcomePageHeaderGrid .name {
+    justify-self: start;
+    align-self: baseline
+}
+
+.small_welcomePageHeaderGrid .name {
+    justify-self: center;
+}
+
+.welcomePageHeaderGrid .clientMode {
+    font-style: italic;
+    font-size: 18px;
+    align-self: baseline;
+}
+
+.small_welcomePageHeaderGrid .clientMode {
+    font-size: 13px;
+}
+
+
+
+
+.welcomePageGrid {
+    display: grid;
+    grid-template-columns: minmax(0px, 475px) minmax(0px, 475px);
+    grid-template-areas: 
+        "header emptySpace" 
+        "actions userActions";
+    grid-row-gap: 0px;
+    grid-column-gap: 25px;
+}
+
+.small_welcomePageGrid {
+    grid-template-columns: minmax(0px, 475px);
+    grid-template-areas: 
+        "header" 
+        "actions" 
+        "userActions";
+}
+
+
+.welcomePageHeaderContainer {
+    padding-top: 16px;
+    border-top: solid 1px rgb(56, 146, 211);
+    display: flex;
+    flex-direction: column;
+}
+
+.welcomePageHeaderImage {
+    margin-top: -16px;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-color: white;
+}
+
+.welcomePageHeaderLabel {
+    flex: 1;
+    text-align: left;
+    background-color: white;
+}
+
+.welcomePageList {
+    margin: 0 !important;
+}
+
+.welcomePageListItem {
+    list-style-type: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.welcomePageList:hover :first-child,
+.welcomePageList:focus :first-child {
+    font-weight: 400;
+}
+
+
+.welcomePageListItem:hover {
+    text-decoration: underline;
+}
+
+.welcomePageHeaderTitle {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.welcomePageHeader {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.welcomeSubTitle {
+    font-weight: 400;
+    font-size: 22px;
+    width: auto;
+    text-align: center;
+}
+
+.welcomeSubTitle::before {
+    font-size: 22px;
+}

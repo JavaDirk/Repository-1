@@ -1,0 +1,698 @@
+.customMenu .x-menu-item-icon{
+    margin-top:2px;
+}
+
+.selectable * {
+    user-select: text;
+}
+
+.x-btn-inner-default-toolbar-medium {
+    font: 400 13px "segoe ui", arial, helvetica, arial, verdana, sans-serif;
+}
+
+.addressBookSelectorButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 22px;
+}
+
+.hidden {
+    display: none; /*muss gesetzt werden: hidden kann nicht gesetzt, da es vom display: flex überschrieben wird. Außerdem konnte man nicht die Audio-Klasse finden, welche am Anfang gestartet wird*/
+}
+
+.x-datepicker{
+    z-index: 20000 !important; /* date-picker in einem Dialog tauchte wg z-index nicht auf*/
+}
+.treeWithSearchPanel .x-grid-cell-inner{
+    padding:0;
+}
+
+.x-tree-icon {
+    background-size: 16px 16px;
+}
+
+.loginTabBar span {
+    color: white;
+}
+
+.loginTabBar .x-tab.x-tab-active.x-tab-default .x-tab-inner-default
+{
+    color:white;
+}
+
+.loginTabBar .x-tab.x-tab-over.x-tab-default .x-tab-inner-default {
+    color: white;
+}
+
+.noAppearance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.mainEMailPanel .x-layout-split-top
+{
+    display: none;
+}
+
+.x-btn-default-medium
+{
+    border-radius:1px;
+}
+
+x-field x-form-item x-form-item-default x-form-type-text x-field-default x-anchor-form-item x-form-item-no-label {
+    margin: 5px 0 !important;
+}
+
+.x-tab-bar-default-top > .x-tab-bar-body-default {
+    padding: 4px 6px 0px 6px;
+}
+
+.x-tab.x-tab-default {
+    background-color: transparent;
+    border: none;
+    height:34px;
+    margin-top:2px;
+}
+
+.x-tip-default {
+    background-color: white;
+    border-color: rgb(207, 207, 207);
+}
+
+.x-tip-default .x-tip-anchor-bottom {
+    border-top: 10px solid rgb(118,118,118);
+    visibility:hidden !important;
+}
+
+.x-tip-default .x-tip-anchor-top {
+    border-bottom: 10px solid rgb(118,118,118);
+    visibility: hidden !important;
+}
+
+.businessCardTooltip .x-tip-body-default
+{
+    padding:0;
+}
+
+.businessCardTooltip {
+    padding: 0;
+}
+
+.businessCardTooltip .x-panel-body-default
+{
+    border-top: none;
+}
+
+.capsLockTooltip.x-tip-default .x-tip-anchor-top {
+    visibility: visible !important;
+}
+
+.contactsContainer .x-autocontainer-innerCt {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:0 0 1px 1px;
+}
+
+.x-form-item-default.x-item-disabled {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    opacity: 0.7;
+}
+
+.x-fieldset-header-default {
+    padding: 0 3px 1px 0;
+}
+
+.x-datepicker-header .x-btn-inner.x-btn-inner-default-small {
+    color: #3892d4;
+}
+
+.x-datepicker .x-btn-inner-default-small {
+    color: white;
+}
+
+.x-tab.x-tab-default.x-tab-over .x-tab-inner-default
+{
+ color: black;   
+}
+
+.x-tab.x-tab-active.x-tab-default .x-tab-inner-default {
+    color: black;
+}
+
+.x-menu-item-icon-default
+{
+    left: 10px;
+}
+
+.column-focus-transparent {
+    outline: none !important;
+    border-color: transparent !important;
+}
+
+.tabPanelWithBigIcons .x-box-inner.x-box-scroller-body-horizontal
+{
+    height:38px !important;/*damit im tabBar von ContactsPanel keine Scrollbar kommt, wenn man BrowserZoom auf 90% und Auflösung auf 125% hat*/
+}
+
+.x-tab-bar .x-box-inner.x-box-scroller-body-horizontal
+{
+    height:36px !important;
+}
+
+.x-box-inner.x-box-scroller-body-horizontal {
+    height: 24px !important; /*damit in tabBars keine Scrollbar kommt, wenn man BrowserZoom auf 90% und Auflösung auf 125% hat*/
+}
+
+.x-menu-item-arrow-default
+{
+    background-size: 12px;
+    height: 16px;
+    width: 16px;
+    top: 9px;
+}
+
+.x-menu-item-focus .x-menu-item-arrow-default, .x-menu-item-active .x-menu-item-arrow-default
+{
+    top: 9px;
+}
+
+.partnerStripPanel .x-tab-icon-right > .x-tab-inner-default, .x-tab-icon-left > .x-tab-inner-default {
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+
+@keyframes blink {
+  from, to { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+/*sorgt dafür, dass bei zooms im Browser der button-text nicht ellipsiert werden*/
+.x-btn-icon-right > .x-btn-inner-default-small, .x-btn-icon-left > .x-btn-inner-default-small
+{
+    max-width: calc(100%);
+}
+
+/*Ohne folgende Regel hat eine Checkbox ein graues aussehen, wenn es keinen focus hat und ein blaues bei einem focus. So gibt es nur den blauen*/
+.x-form-cb-checked .x-form-radio-default
+{
+    background-position:-15px -15px;
+}
+
+.x-webkit .x-form-text {
+    height: calc(100%) ;
+}
+
+.x-btn-inner-default-large {
+    font-family: "segoe ui", arial, helvetica, arial, verdana, sans-serif;
+    font-weight: 400;
+}
+
+* /* Um ARIA "auszuschalten" bzw. nicht sichtbar zu sein*/ {
+    box-shadow: none !important;
+    outline: transparent none medium !important;
+  user-select:  none;
+}
+
+input {
+    user-select: text;
+}
+
+/*min-width ist für den Firefox erforderlich, weil ansonsten Strings bei zu geringer Breite nicht ellipsiert werden. Lösung kommt von https://stackoverflow.com/questions/27932795/firefox-text-overflow-with-nowrap-ignored-chrome-works */
+* {
+    min-height: 0;
+    min-width: 0;
+    line-height: normal;
+}
+
+.x-view-item-focused {
+    outline: none !important;
+}
+
+.x-splitter-focus:after {
+    border: none;
+}
+
+.x-grid-item-focused {
+    border: none;
+}
+
+.x-grid-item-focused .x-grid-cell-inner:before
+{
+    border:none;
+}
+/*Ende ARIA Abschaltung*/
+
+
+.firstMenuItem
+{
+    font-weight: 600;
+    color: black;
+    
+}
+
+/* Scroll bar stylen */
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+} /* this targets the default scrollbar (compulsory) */
+
+::-webkit-scrollbar-track {
+    background-color: rgb(225, 225, 225);
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(190, 190, 190);
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+    height:0;
+    width:0;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+.callButton .x-btn-icon-el
+{
+         /*Icon von 16x16 auf 24x24 und dann in die Mitte schieben*/
+        width: 24px;
+        height:24px;
+
+        left:7px;
+        top:7px;
+}
+
+.x-tab-icon-el
+{
+    background-size:16px;
+}
+
+.loading_white .x-mask-msg-text
+{
+    background-image: url(images/loading_white.png);
+}
+
+.x-mask-msg-text
+{
+    background-position: center 0;
+    background-size: 16px 16px;
+    padding: 8px;
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+}
+
+@-moz-keyframes spin
+{
+    100%
+    {
+        -moz-transform:rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin
+{
+    100%
+    {
+    -webkit-transform:rotate(360deg);
+    }
+}
+
+@keyframes spin
+{
+    100%
+    {
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+.x-form-item-body-default.x-form-checkboxgroup-body
+{
+    padding: 0;
+}
+
+.x-mask-msg
+{
+    background: transparent;
+    margin-top:2px;
+}
+
+.x-mask {
+    background: transparent;
+}
+
+.x-window-header-default-top,.x-panel-header-default-horizontal
+{
+    padding: 4px;
+}
+
+.ext-ux-tab-orange
+{
+    background-color: orange;
+}
+
+.x-column-header {
+    border-right: 0 !important;
+}
+
+.x-grid-header-ct {
+    border: 0 !important;
+}
+
+.x-form-display-field-default {
+    height: auto;
+    min-height: 24px;
+}
+
+.x-btn-default-smallMedium {
+    height: 20px;
+    width: 20px;
+}
+
+.x-btn-icon-el-default-smallMedium {
+    height: 20px;
+    width: 20px;
+}
+
+.x-column-header-inner {
+    padding-top: 1px;
+    padding-bottom: 2px;
+}
+
+.x-grid-cell-inner {
+    overflow: hidden;
+    padding: 0px 5px 0px 10px;
+    white-space: nowrap;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.bubbleForPresenceState
+{
+    position: relative;
+    width: 173px;
+    height: 25px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.bubbleForPresenceState input 
+{
+    width: 136px;
+}
+
+.svg 
+{
+    width: 24px;
+    height: 24px;
+}
+
+.smallSvg svg
+{
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
+
+
+.noDisplay 
+{
+    display: none !important;
+}
+
+x-grid-row-error {
+    color: red;
+}
+
+.x-grid-with-row-lines .x-grid-item {
+    border: none;
+    margin: 0;
+}
+
+.x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.x-grid-with-row-lines .x-grid-item-selected + .x-grid-item {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.x-grid-with-row-lines .x-grid-item-selected + .x-grid-item {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.x-grid-with-row-lines .x-grid-item + .x-grid-item-over {
+    border: none !important;
+    margin: 0;
+}
+
+x-grid-item x-grid-item-alt .x-grid-item-over {
+    border: none !important;
+}
+
+.x-grid-with-row-lines .x-grid-item-over + .x-grid-item {
+    border: none !important;
+    margin: 0;
+}
+
+.x-grid-with-row-lines .x-grid-item:first-child {
+    border:none;
+}
+
+
+.form-header{
+    margin-bottom:15px;
+}
+
+.form-small-header{
+    color:#3892d3;
+    font-size: 12px;
+}
+
+.form-field{
+    padding:7px;
+    padding-top:3px;
+    padding-bottom:0px;
+}
+
+
+.form-row{
+    display:block;
+}
+
+
+.form-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.form-full-col {
+    float:left;
+    width:100%;
+}
+
+.form-half-col {
+    float:left;
+    width:50%;
+}
+
+.form-70-col {
+    float:left;
+    width:70%;
+}
+
+.form-30-col {
+    float:left;
+    width:30%;
+}
+
+.t3 {
+    position:relative;
+    top:-3px;
+}
+
+.inline {
+    display:inline-block;
+}
+
+.label-limit label {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+ /*   width:338px;*/
+}
+
+.label-limit-large label {
+    width:100%;
+}
+
+.align-right {
+    float:right;
+}
+
+.normal-side-padding{
+    padding:0px 0px;
+}
+
+.large-left-padding{
+    padding-left:10px;
+}
+
+.form-divider{
+    margin-bottom:5px;
+}
+
+.hover-effect{
+    transition:.5s;
+}
+
+.hover-effect>div{
+    position:relative;
+    top:-2px;
+}
+
+.hover-effect:hover {
+     background-color:#d6e9f6 !important;
+}
+
+.background-selected-item{
+    background-color:#d9ebf8 !important;
+}
+
+.form-field-max-size{
+    max-height:350px;
+    min-height:350px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+
+@keyframes pulse {
+  0% {
+    border-color: rgb(255, 121, 77);
+  }
+  50% {
+    border-color: rgb(228, 228, 228);
+  }
+  100% {
+      border-color: rgb(255, 121, 77);
+  }
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade {
+    0% {
+        transform: scale(1.0)
+    }
+
+    50% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1.0)
+    }
+}
+
+@keyframes blinkBorderLeft 
+{
+    0%, 49% {
+        border-color: var(--color-badge);
+    }
+    50%, 100% { border-color: transparent; }
+}
+
+.x-hidden-offsets.partnerStripPanel {
+    display: none !important;
+}
+
+.x-hidden-offsets.partnerGroup {
+    display: none !important;
+}
+
+.menuItem:hover {
+   background-color: rgb(214, 233, 246);
+}
+
+.menuItem {
+   cursor: pointer;
+   padding: 4px;
+}
+
+.settingsTitle {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.settingsSubTitle {
+    font-size: 13px;
+    color: rgb(54,54,54);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight:bold;
+}
+
+.flex-container {
+    flex-direction: row;
+    
+    display:flex !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.modalDialog input::placeholder 
+{
+    font-size: 16px;
+    padding-bottom:2px; /*sonst wird ein g abgeschnitten*/
+}
+
+.modalDialog textarea::placeholder {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.modalDialog{
+    border-color:rgb(118,118,118);
+}
+
+
+
+/*begin: die näcsten css-Regeln sind "nur" dafür da, damit man bei autoCompletion die Liste sehen kann*/
+.searchPanelWithAddressBookChooser {
+    overflow: visible;
+}
+
+.searchPanelWithAddressBookChooser .x-box-inner {
+    overflow: visible;
+}
+
+.telephoneInputPanel .x-box-inner, .telephoneInputPanel .x-box-layout-ct {
+    overflow: visible;
+}
+/*end*/
